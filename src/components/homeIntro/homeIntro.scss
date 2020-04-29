@@ -1,0 +1,195 @@
+@mixin from200-to-992 {
+    @media screen and (min-width:200px) and (max-width:991.97px){
+        @content
+    }
+}
+@mixin more-than-992 {
+    @media (min-width:991.97px){
+        @content
+    }
+}
+.cus-bg{
+    background-color: #191917;
+    overflow: hidden;
+}
+.intro-wrap{
+    padding-top: 50px;
+    padding-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        
+        .intro-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+                .bottle-wrap{
+                    width: 33%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    position: relative;
+                        @include from200-to-992{
+                            display: none;
+                        }
+                        .bottle-img{
+                            width: 210px;
+                        }
+                        &::after{
+                            content:'';
+                            background-image: url('../../assets/images/benefits.png');
+                            bottom: 29px;
+                            right: -132px;
+                            position: absolute;
+                            width: 220px;
+                            height: 140px;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+                }
+                .sub-para-wrap{
+                    width: 33%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    @include from200-to-992{
+                        width: 100%;
+                    }       
+                        .sub-para{
+                            color: #fff;
+                            font-size: 14px;
+                            font-family: "Helvetica Neue";
+                            line-height: 17px;
+                            width: 100%;
+                            margin-top: 10px;
+                        }
+                }
+                .sized-up-wrap{
+                    width: 33%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: relative;
+                        @include from200-to-992{
+                            display: none;
+                        }
+                    .rock-img{
+                        width: 120%;
+                        position: absolute;
+                        top:0px;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        background: transparent 0% 0% no-repeat padding-box;
+                        mix-blend-mode: lighten;
+                    }
+                        .sized-up-h{
+                            width: 60%;
+                            font-size: 35px;
+                            font-weight: bold;
+                            color: #fff;
+                            line-height: 35px;
+                            text-transform: uppercase;
+                            font-family: "Helvetica Neue Bold";
+                            text-align: left;
+                            z-index: 10;
+                                .sizeup-span-h{
+                                    color:#FFEE00;
+                                }
+                        }
+                        .sizeup-btn-wrap{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-end;
+                            width: 100%;                      
+                                .gmp-img{
+                                    width: 40px;
+                                    margin: 0px 20px;
+                                }
+                        }
+                }
+        }
+        
+}
+.intro-main-p{
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Helvetica Neue';
+    line-height: 22px;
+    width: 100%;
+}
+.m-sized-up-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+        @include more-than-992{
+            display: none;
+        }
+    .m-rock-img{
+        width: 300px;
+        background: transparent 0% 0% no-repeat padding-box;
+        mix-blend-mode: lighten;
+    }
+        .m-sized-up-h{
+            min-width: 60%;
+            width: 75%;
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+            line-height: 35px;
+            text-transform: uppercase;
+            font-family: "Helvetica Neue Bold";
+            text-align: left;
+            z-index: 10;
+            position: absolute;
+            top: 210px;
+                .m-sizeup-span-h{
+                    color:#FFEE00;
+                }
+        }
+        .m-sizeup-btn-wrap{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;                      
+                .m-gmp-img{
+                    width: 40px;
+                    margin: 0px 20px;
+                }
+        }
+}
+.m-bottle-wrap{
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+        @include more-than-992{
+            display: none;
+        }
+        .m-bottle-img{
+            width: 120px;
+            position: relative;
+            left: 5px;
+        }
+        .m-3-arrow-wrap{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            .m-3-arrow{
+                width: 160px;
+                height: 100px;
+                position: relative;
+                top: -10px;
+            }
+        }
+}
+.btn-order{
+    @include from200-to-992{
+        padding: 10px 35px;
+    }
+}

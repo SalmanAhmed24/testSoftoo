@@ -1,0 +1,29 @@
+.usa-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+        .usa-img{
+            width: 40px;
+        }
+        .usa-text-wrap{
+            display: flex;
+            flex-direction: column;
+            margin-left:10px;
+                .usa-main-p{
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-family: 'Helvetica Neue Bold';
+                    color:#fff;
+                }
+                .usa-sub-p{
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    font-size: 14px;
+                    color:#fff;
+                    font-family: 'Helvetica Neue';
+                    text-align: left;
+                }
+        }
+}

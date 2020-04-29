@@ -1,0 +1,272 @@
+@mixin from200-to-992 {
+    @media screen and (min-width:200px) and (max-width:991.97px) {
+        @content
+    }
+}
+@mixin from200-to-575 {
+    @media screen and (min-width:200px) and (max-width:574.97px){
+        @content
+    }
+}
+@mixin morethan-992 {
+        @media (min-width:992px){
+            @content
+        }
+}
+.banner-wrap{
+    padding-bottom: 100px;
+}
+.logo-wrap-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+        .logo{
+            margin-top: 30px;
+            width: 225px;
+            height: 55px;
+                @include from200-to-575{
+                    width: 125px;
+                    height: auto;
+                }
+        }
+}
+.heading-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        .main-head{
+            margin-top: 10px;
+            font-family: 'Helvetica Neue Bold';
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 55px;
+            color:#fff;
+            @include from200-to-575{
+                font-size: 35px;
+            }
+                .yellow-text{
+                    color:#FFEE00
+                }
+        }
+        .main-head-p{
+            margin-top: 10px;
+            color:#fff;
+            font-family: 'Helvetica Neue Bold';
+            font-size: 19px;
+            text-transform: uppercase;
+            width: 40%;
+            @include from200-to-575{
+                font-size: 16px;
+            }
+                @include from200-to-992{
+                    width: 100%;
+                }
+        }
+}
+.other-info-wrap{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+        @include from200-to-992{
+            display: none;
+        }
+        .bottle-wrap{
+            width: 20%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+                .img-wrap{
+                    position: relative;
+                    .bottle-img{
+                        width: 180px;
+                        height: auto;
+                        position: relative;
+                        z-index: 9;
+                    }
+                    &::before{
+                        content: "";
+                        background-image: url('../../assets/images/bottle-smoke-down.png');
+                        position: absolute;
+                        bottom: 0;
+                        left: 145px;
+                        width: 70%;
+                        height: 70%;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                    &::after{
+                        content: "";
+                        background-image: url('../../assets/images/bottle-smoke-up.png');
+                        position: absolute;
+                        top: 0;
+                        left: -55px;
+                        width: 70%;
+                        height: 70%;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
+            ;
+        }
+}
+.brand-l-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 35%;
+    background-image: url('../../assets/images/rock-header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+        .logo-imgs{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 60%;
+            z-index: 10;
+                .brand-logos{
+                    width: 60px;
+                    height: auto;
+                    margin-right: 10px;
+                }
+        }
+}
+.arrow-img-wrap{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+        .arrow-img{
+            width: 85%;
+            height: auto;
+            z-index: 10;
+        }
+}
+.b-logo4-wrap{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+        .b-logo4{
+            width: 85%;
+            height: auto;
+        }
+}
+.form-wrap{
+    position: relative;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+        @include from200-to-992{
+            display: none;
+        }
+
+        .count-wrap{
+            position: absolute;
+            bottom: -95px;
+            right: 20px;
+                .count-logo{
+                    width: 180px;    
+                }
+        }
+}
+.bg-m-banner{
+    position: relative;
+    @include morethan-992{
+        display: none;
+    }
+        
+        .m-banner-wrap{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 450px;
+            position: relative;
+            .rock{
+                position: absolute;
+                top:0px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 426px;
+                z-index: -1;
+                @include from200-to-575{
+                    width: 300px;
+                }
+            }
+                .m-other-info{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                        .img-bottle{
+                            display: flex;
+                            flex-direction: row;
+                                .bottle{
+                                    width: 100px;
+                                    @include from200-to-575{
+                                        width: 70px;
+                                    }
+                                }   
+                        }
+                        .logo-wrap{
+                            display: flex;
+                            flex-direction: column;
+                            
+                        }
+                        .cert-logo{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            margin-bottom: 10px;
+                                .m-brand-logos{
+                                    width: 60px;
+                                    margin-right: 10px;
+                                    @include from200-to-575{
+                                        width: 45px;
+                                    }
+                                }
+                        }
+                        .m-arrow-logo{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                                .m-arrow-img{
+                                    width: 260px;
+                                    @include from200-to-575{
+                                        width: 180px;
+                                    }
+                                }
+                        }
+                }
+                .m-btn-wraper{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                        .m-b-logo4{
+                            width: 300px;
+                            margin-bottom: 20px;
+                                @include from200-to-575{
+                                    width: 230px;
+                                }
+
+                        }
+                        .country-seals{
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            margin-bottom: 20px;
+                                .count-logo{
+                                    width: 200px;
+                                }
+                        }
+                }
+        }
+}

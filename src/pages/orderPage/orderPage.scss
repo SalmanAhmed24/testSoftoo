@@ -1,0 +1,448 @@
+@mixin from200-to-767 {
+    @media screen and (min-width:200px) and (max-width:767.97px){
+        @content;
+    }
+}
+@mixin from200-to-400 {
+    @media screen and (min-width:200px) and (max-width:399.97px){
+        @content
+    }
+}
+.bg-prog{
+    background:transparentize($color: #C6D8FF, $amount: 0.9);
+    padding-bottom: 30px;
+}
+.logo{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-top: 20px;
+margin-bottom: 20px;
+    .img-logo{  
+        width: 150px;
+    }
+}
+.offer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        .offer-wrap{
+            width: 95%;
+            background-color: #fff;
+            box-shadow: 0px 10px 20px #00000029;
+            border-radius: 20px;
+                .para-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                        .upper-para{
+                            color: #D1872C;
+                            font-family: 'Helvetica Neue Bold';
+                            text-transform: uppercase;
+                            margin-top: 15px;
+                            margin-bottom: 15px;
+                            padding: 0 10px;
+                        }
+                        .down-para{
+                            font-family: 'Helvetica Neue Bold';
+                            padding: 0 10px;
+                            font-size: 14px;
+                            margin-bottom: 15px;
+                                @include from200-to-400{
+                                    font-size: 12px;
+                                }
+                                .watch-s{
+                                    .watch{
+                                        width: 20px;
+                                        margin-left: 5px;
+                                    }
+                                }
+                        }
+                }
+                .offer-card-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+                        .offer-card{
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: row;
+                            width: 100%;
+                            padding:20px 30px;
+                            background-color: #fff;
+                            background: #FFFFFF 0% 0% no-repeat padding-box;
+                            border: 3px solid #F5D203;
+                            border-radius: 10px;
+                                @include from200-to-767{
+                                    flex-flow: column;
+                                }
+                                &:first-child{
+                            background: #F5D203 0% 0% no-repeat padding-box;
+                                }
+                                .img-wrap{
+                                    
+                                    width: 60%;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    flex-direction: row;
+                                        @include from200-to-767{
+                                            width: 100%;
+                                            justify-content: center;
+                                        }
+                                        .small-bottles{
+                                            width: 80px;
+                                                @include from200-to-400{
+                                                    width: 60px;
+                                                }
+
+                                        }
+                                        .plus{
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            justify-content: center;
+                                            text-align: left;
+                                            font-family: 'Helvetica Neue Bold';
+                                            font-weight: bold;
+                                            font-size: 70px;
+                                            letter-spacing: 0px;
+                                            color: #FFFFFF;
+                                            text-transform: uppercase;
+                                        }
+                                }
+                                .offer-info-wrap{
+                                    width: 35%;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    padding: 20px 10px;
+                                        @include from200-to-767{
+                                            width: 100%;;
+                                            justify-content: center;
+                                            align-items: center;
+                                        }
+                                        .first-head{
+                                            font-family: 'Helvetica Neue Bold';
+                                            font-weight: bold;
+                                            text-align: left;
+                                            text-transform: uppercase;
+                                            margin-bottom: 10px;
+                                            font-size: 15px;
+                                                @include from200-to-400{
+                                                    font-size: 12px;
+                                                }
+                                        }
+                                        .buy-p{
+                                            font-family: 'Helvetica Neue';
+                                            text-align: left;
+                                            margin-bottom: 10px;
+                                            font-size: 15px;
+                                        }
+                                        .price{
+                                            font-family: 'Helvetica Neue Bold';
+                                            font-weight: bold;
+                                            text-align: left;
+                                            font-size: 35px;
+                                                @include from200-to-400{
+                                                    font-size: 30px;
+                                                }
+                                            
+                                                .each{
+                                                    font-size: 18px;
+                                                    margin-left: 5px;
+                                                }
+                                        }
+                                        .save{
+                                            font-family: 'Helvetica Neue';
+                                            font-size: 12px;
+                                        }
+                                }
+                                .tick-wrap{
+                                    width: 5%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                        @include from200-to-767{
+                                            width: 100%;
+                                        }
+                                        .circle{
+                                            width: 40px;
+                                            height: 40px;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            align-items: center;
+                                            border-radius: 50%;
+                                            background-color: #000;
+                                        }
+                                }
+                        }
+
+                }
+                .summary-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding: 20px;
+                        .summary-head{
+                            font-family: 'Helvetica Neue Bold';
+                            font-weight: bold;
+                            font-size: 25px;
+                            text-transform: capitalize;
+                            margin-bottom: 20px;
+                                .clip-img{
+                                    margin-right: 10px;
+                                }
+                        }
+                        .summary-table-wrap{
+                            width: 90%;
+                                @include from200-to-400{
+                                    width:100%
+                                }
+                        }
+                }
+        }
+}
+.o-wrapper{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 20px;
+    .header{
+        position: relative;
+        color:#fff;
+        font-weight: bold;
+        font-family: 'Helvetica Neue Bold';
+        padding:15px;
+        background: transparent linear-gradient(177deg, #FFEE00 0%, #D1872C 100%) 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;  
+            
+    }
+    .cus-form{
+        padding:5px 20px;
+        display: flex;
+        flex-direction: column;
+            .custom-input{
+                color:#D1872C;
+                font-size:14px;
+                margin-top: 12px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 3px 6px #00000010;
+                border: 1px solid #E2E2E2;
+                border-radius: 25px;
+                padding: 3px 10px;
+                text-align: left;
+                font-family: 'Helvetica Neue';
+                letter-spacing: 0px;
+                color: #D1872C;
+                    &:focus{
+                        outline: none;
+                    }
+                    &::placeholder{
+                        color: #D1872C;
+                    }
+            }
+    }
+    
+        .btn-order{
+            font-family: 'Helvetica Neue Bold';
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: transparent linear-gradient(177deg, #FFEE00 0%, #D1872C 100%) 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .form-footer-p{
+            font-family: 'Helvetica Neue';
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+}
+.cvv-wraper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+        .whats{
+            font-family: 'Helvetica Neue';
+            margin-top:18px;
+            color:#D1872C;
+            cursor: pointer;
+            text-decoration: none;
+                &:hover{
+                    text-decoration: none;
+                }
+        }
+}
+.lock-wrap{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+        .order-lock{
+            width: 250px;
+        }
+}
+.logo-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:20px;
+        .logo-b{
+            width: 80px;
+        }
+}
+
+.money-back-wrap{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 20px;
+    margin-top:20px;
+            .gaurentee-wraper{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                    .gaurentee-img{
+                        width: 100px;
+                    }
+            }
+            .gaurentee-p{
+                margin-bottom: 15px;
+                font-family: 'Helvetica Neue';
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .cert-wraper{
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+                    .cert-img{
+                        width: 250px;
+                    }
+            }
+}
+
+.plus-yellow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-family: 'Helvetica Neue Bold';
+    font-weight: bold;
+    font-size: 70px;
+    letter-spacing: 0px;
+    color: #F5D203;
+    text-transform: uppercase;
+}
+                                .circle-silver{
+                                            width: 40px;
+                                            height: 40px;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            align-items: center;
+                                            border-radius: 50%;
+                                            background-color: #EBEBEB;
+}
+.prod-name{
+    display: block;
+    font-size: 25px;
+    font-family: 'Helvetica Neue Bold';
+    font-weight: bold;
+    color:#F5D203;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+        @include from200-to-400{
+            font-size: 15px;
+            margin-top:10px;
+        }
+}
+.prod-desc{
+    display: block;
+    font-size: 20px;
+    font-family: 'Helvetica Neue Bold';
+    font-weight: bold;
+    color:#000;
+    text-align: left;
+    text-transform: uppercase;
+        @include from200-to-400{
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+}
+.price-y{
+    display: block;
+    font-size: 18px;
+    font-family: 'Helvetica Neue Bold';
+    font-weight: bold;
+    color:#F5D203;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.total{
+    display: block;
+    font-size: 18px;
+    font-family: 'Helvetica Neue Bold';
+    font-weight: bold;
+    color:#000;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.item{
+    text-align: left;
+}
+.order-foot-img{
+    width: 250px;
+    margin-bottom: 20px;
+}
+.visa-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+        .pay-cred{
+            color:#D1872C;
+            font-family: 'Helvetica Neue';
+        }
+        .visa{
+            width: 80px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .we-accept{
+            color:#000;
+            font-family: 'Helvetica Neue';
+        }
+}
+.table td{
+    @include from200-to-400{
+        padding: 0.75rem 0rem;
+    }
+}

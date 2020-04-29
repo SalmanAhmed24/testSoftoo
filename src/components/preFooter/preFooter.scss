@@ -1,0 +1,155 @@
+@mixin from200-to-992 {
+    @media screen and (min-width:200px) and (max-width:991.97px){
+        @content;
+    }
+}
+@mixin from200-to-767 {
+    @media screen and (min-width:200px) and (max-width:767.97px){
+        @content;
+    }
+}   
+.cus-yello-bg{
+    background-color: #F5D203;
+    padding-top:50px;
+    padding-bottom:30px;
+}
+.img-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+        .img-footer{
+            width: 260px;
+            mix-blend-mode: darken;
+        }
+}
+.content-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        .logo-footer{
+            width: 160px;
+            margin-bottom: 25px;
+        }
+        .statisfy-img{
+            width: 260px;
+            margin-bottom: 10px;
+        }
+        .content-para{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 25px;
+                .para{
+                    color:#000;
+                    font-family: 'Helvetica Neue';
+                    line-height: 25px;
+                }
+        }
+        .logo-imgs{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 10px;
+                .brand-logo{
+                    margin-right: 10px;
+    width: 60px;
+    margin-top: 20px;
+                }
+        }
+        .time-logo{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+                .time-img{
+                    width: 120px;
+                }
+        }
+}
+.bootle-foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+        .bottle{
+            width: 200px;
+        }
+}
+.desktop{
+    @include from200-to-767{
+        display: none;
+    }
+}
+.mobile{
+    display: none;
+        @include from200-to-767{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+                .m-content{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                        .m-logo-footer{
+                            width: 125px;
+                        }
+                }
+                .m-img-wrapper{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                        .m-img-footer{
+                            width: 260px;
+                            mix-blend-mode: darken;
+                        }
+                }
+                .m-satisfy-wrap{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                        .statisfy-img{
+                            width: 260px;
+                            margin-bottom: 10px;
+                        }
+                }
+                .content-para{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-bottom: 25px;
+                        .para{
+                            color:#000;
+                            font-family: 'Helvetica Neue';
+                            line-height: 25px;
+                        }
+                }
+                .m-bootle-foot{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin-top: 25px;
+                        .m-bottle{
+                            width: 200px;
+                        }
+                }
+                .m-logo-imgs{
+                    display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 10px;
+                    .m-brand-logo{
+                        margin-right: 10px;
+                        width: 60px;
+                        margin-top: 20px;
+                    }
+                }
+                .m-time-logo{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                        .m-time-img{
+                            width: 120px;
+                        }
+                }
+        }
+}
